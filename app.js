@@ -12,7 +12,7 @@ var app = express.createServer();
 var instagram = require('instagram-node-lib');
 instagram.set('client_id', CLIENT_ID);
 instagram.set('client_secret', CLIENT_SECRET);
-instagram.set('redirect_uri', 'http://localhost:3000/callback');
+instagram.set('redirect_uri', process.env.CALLBACK_URL);
 
 // config
 app.configure(function() {
